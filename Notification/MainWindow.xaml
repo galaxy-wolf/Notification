@@ -1,0 +1,21 @@
+﻿<Window x:Class="Notification.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notification"
+         xmlns:tb="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"
+        ShowInTaskbar="True"
+        Topmost="True"
+        WindowStyle="None"
+        WindowState = "Maximized"
+        Background="#AAFF0000"
+        AllowsTransparency="True"
+       >
+    <Grid>
+        <tb:TaskbarIcon x:Name="MyNotifyIcon" IconSource="1.ico" ToolTipText="打卡提醒" />
+        <Button x:Name="button" Content="去打卡" Background="Transparent" Foreground="GreenYellow" FontSize="50" Click="button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="100" Margin="281,272,287,163"/>
+        <TextBox x:Name="timeTex" BorderThickness="0" Background="Transparent" FontSize="80" Foreground="DarkGreen"  TextAlignment="Center" HorizontalAlignment="Center" Height="100"   Text="09:30" VerticalAlignment="Center" Width="300" Margin="238,102,230,333"/>
+    </Grid>
+</Window>
