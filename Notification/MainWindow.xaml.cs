@@ -22,6 +22,8 @@ namespace Notification
     public partial class MainWindow : Window
     {
 
+        public EventHandler ExitAppClicked;
+
         DispatcherTimer timer;
 
 
@@ -39,8 +41,10 @@ namespace Notification
 
                   if (current.DayOfWeek != DayOfWeek.Sunday && current.DayOfWeek != DayOfWeek.Saturday)
                   {
-                      if (current.Hour == 9 && current.Minute == 55
-                            || current.Hour == 19 && current.Minute == 0)
+                      if (current.Hour == Notification.Properties.Settings.Default.begin_hour
+                            && current.Minute == Notification.Properties.Settings.Default.begin_min
+                            || current.Hour == Notification.Properties.Settings.Default.end_hour
+                            && current.Minute == Notification.Properties.Settings.Default.end_min)
                       {
                           this.Show();
                       }
@@ -52,7 +56,13 @@ namespace Notification
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            System.Diagnostics.Process.Start("http://www.baidu.com");
+            System.Diagnostics.Process.Start(Notification.Properties.Settings.Default.OA_URL);
+        }
+
+        private void exit_click(object sender, RoutedEventArgs e)
+        {
+            if (ExitAppClicked != null)
+                ExitAppClicked(this, e);
         }
     }
 }
