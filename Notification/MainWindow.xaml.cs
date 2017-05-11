@@ -25,7 +25,7 @@ namespace Notification
         public EventHandler ExitAppClicked;
 
         DispatcherTimer timer;
-
+        bool IsCheckDone = false;
 
         public MainWindow()
         {
@@ -46,7 +46,10 @@ namespace Notification
                             || current.Hour == Notification.Properties.Settings.Default.end_hour
                             && current.Minute == Notification.Properties.Settings.Default.end_min)
                       {
-                          this.Show();
+                          if (IsCheckDone)
+                              IsCheckDone = false;
+                          else
+                              this.Show();
                       }
                   }
               };
@@ -63,6 +66,12 @@ namespace Notification
         {
             if (ExitAppClicked != null)
                 ExitAppClicked(this, e);
+        }
+
+        private void check_click(object sender, RoutedEventArgs e)
+        {
+            IsCheckDone = true;
+            System.Diagnostics.Process.Start(Notification.Properties.Settings.Default.OA_URL);
         }
     }
 }

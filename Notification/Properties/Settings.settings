@@ -5,20 +5,20 @@
     <Setting Name="StartWithSystem" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="OA_URL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">www.baidu.com</Value>
-    </Setting>
     <Setting Name="begin_hour" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">9</Value>
-    </Setting>
-    <Setting Name="begin_min" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">55</Value>
     </Setting>
     <Setting Name="end_hour" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">19</Value>
     </Setting>
     <Setting Name="end_min" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="OA_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://web.oa.zulong.com</Value>
+    </Setting>
+    <Setting Name="begin_min" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">55</Value>
     </Setting>
   </Settings>
 </SettingsFile>

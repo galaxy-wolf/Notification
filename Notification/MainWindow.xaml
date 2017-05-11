@@ -17,6 +17,7 @@
         <tb:TaskbarIcon x:Name="MyNotifyIcon" IconSource="1.ico" ToolTipText="打卡提醒" >
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
+                    <MenuItem Header="打卡" Click="check_click"/>
                     <MenuItem Header="关闭" Click="exit_click"/>
                 </ContextMenu>
             </tb:TaskbarIcon.ContextMenu>

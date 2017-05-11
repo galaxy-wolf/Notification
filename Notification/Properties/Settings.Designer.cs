@@ -37,18 +37,6 @@ namespace Notification.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("www.baidu.com")]
-        public string OA_URL {
-            get {
-                return ((string)(this["OA_URL"]));
-            }
-            set {
-                this["OA_URL"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("9")]
         public int begin_hour {
             get {
@@ -56,18 +44,6 @@ namespace Notification.Properties {
             }
             set {
                 this["begin_hour"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("55")]
-        public int begin_min {
-            get {
-                return ((int)(this["begin_min"]));
-            }
-            set {
-                this["begin_min"] = value;
             }
         }
         
@@ -92,6 +68,30 @@ namespace Notification.Properties {
             }
             set {
                 this["end_min"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://web.oa.zulong.com")]
+        public string OA_URL {
+            get {
+                return ((string)(this["OA_URL"]));
+            }
+            set {
+                this["OA_URL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("55")]
+        public int begin_min {
+            get {
+                return ((int)(this["begin_min"]));
+            }
+            set {
+                this["begin_min"] = value;
             }
         }
     }
